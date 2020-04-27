@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TSGModLoader.exe" version="1.0.0.0" publicKeyToken="8355523babbdb981" language="ru" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="TSGLauncherA3.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TSGModLoader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TSGModLoader.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Параметры манифеста UAC
+             Если вы хотите изменить уровень контроля учетных записей Windows, замените узел 
+             requestedExecutionLevel на один из следующих.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            При указании элемента requestedExecutionLevel будет отключена виртуализация файлов и реестра. 
+            Удалите этот элемент, если виртуализация требуется приложению для обратной
+            совместимости.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TSGModLoader.exe" size="62376">
+      <assemblyIdentity name="TSGModLoader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pBDQypiFLakxqCYPlbueojDA6Otbqb2vzIDmgxU00uc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Compressor\lzma.exe" size="108544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qVIimE9g4/W+pAmcq4WGiUZSM5Gw5Q1/bcxehm0LDb0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\application-x-gnome-saved-search.png" size="8108">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>x6ynZV38imYbaxPHphEbwJxMhV1QxqO4cfP3Jz1Yw0k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\apport.png" size="5858">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SHkR9X1aq72dMEBFm5qbu6b70b4U6A57/GQ8Xdfsk2c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\aptdaemon-add.png" size="8216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tqcQKFNjzVmkXWM4eGIAU2hG7TG0wu0FoTU5nhkixWE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\aptdaemon-working.png" size="9361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qb2y8dwjg2mmO+KfEajYvQ04mgV1tdk8XoRmJDJQUvw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\aram3B.png" size="153771">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0iRxvJbEAT04vyqDtDXLwmoipcUMiLEhYKZgwRfWByo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\aram3R.png" size="153015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lc3XYP8oWk0pg2XiO/CCevEz+TngeYakpd9ISYEzu8Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arma.png" size="126888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cuhnx0Lt16DDJ4o55MqmyXRBPckpqHj2pi0d1AJmOo4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arma_3_icon.png" size="165351">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vJvGtPxxVTj77gksj+a/nhymdvaYkIwyWQbliVzbQP8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arma3.png" size="5649">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/fMK8EWwbLQP28Sa/G5haoGsYltciubijCruw0nhXiA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arma3_black.png" size="6029">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YBw6xwuKeEPokteUbj7LGcdNIGdEv5bETJhe4ak0sVw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\arma3_start.png" size="40662">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yPYZZ2n9D6knxWJZDydRWSmYu9ohT344bIM7wtw/CYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\baktiv.png" size="866">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UNnDEFOi51JvHJGSPlF/3OPvYLKIWdx75C0P67Lejgg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\bbackground.png" size="1697">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3hpq1cB8TA05gEYnTi2ICSBw2injmSIfBIbFrG5IXBQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\config-users-groups.png" size="4448">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jn9q/FzgEkj/t14+bN4fvYtEyxzZcFluHPpBrtP8bM8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\cup_homew.png" size="201943">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AT4ntwdL8FXcWBvfzZaS3KMFYvc/QjOo9CfX9TzZQww=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\defender.png" size="37666">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hCiiJuauKXEKBwV51dGD6LHBV1BwCHf28j8y9o+kNaE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\defenderG.png" size="19811">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wGVVfnP90SEiA/glqusWU7EUNAgT/+/dcn44v7SIwoU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\document-new.png" size="1040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tVop/aCx3dqgq7bh5GOig0nHSqCyd2yd36T0i2H0Sp8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\edit-select-all.png" size="678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sOuPHwWEkIvZAG0ug0ru0PYbWcdUuwSyvCtOl9JZfpI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-default.png" size="2924">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nyrHJggY+BLTK7RbE/qWfvdwKDrhyphXvJeJEZjG/80=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-favorite.png" size="2210">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3v4QdHCNBrPbvTgO5kCC1BgNdNr+yDdnBeGS+iQDINA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-important.png" size="1362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZFtth6jN/bcAf3+L0EgpN2gXm1xsDf4iHnRvMOOzo/8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-new.png" size="1328">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0MS7pgpP6YmPdlzuSHtIhm/tE17CWv/szsqDxQM0ahw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-people.png" size="2289">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oAZIuuu8KocZPzWrt6BZpJJoIScVeu8oFqjyNs9qojM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-system.png" size="2681">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LK8hYmeRVvEnZhqjc5n3+d3U9Drtu2kL9L3DDArGwKQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\emblem-unreadable.png" size="2224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xwEcNAm1bTrLg7alkjMfu0NSX1YvhxPkjL7KLs4o4fM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\gnome-dev-ethernet.png" size="22947">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RwYaqoZ1Lp14hHu6uf0luEntkQA9fdA5N1JIma8d71Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\go-up.png" size="1395">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iL0X+zcz17t30FmTj95dHQ+yo73ajazW64WE9g4r8E0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\list-add.png" size="637">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Bj2QAvtIaWlsZ/QwJ5PJC2Zi0Ez87pB6Lr2+ym9uh/4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\list-remove.png" size="1791">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HkCk1aaIJONXtYc0rXKdbwrCusXHOHWLz2hc12IMTK0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\logo_tsg_266x122.png" size="130251">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hcfUQ7JDeefIMAg36EFMyat/Jy0pgVKOHZ7AfYI/xzs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\logo_TSG_537x320.png" size="26655">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>omCK8JzpUf1PHCCCVO3pVQElOJo74245bh6LOXLRqhY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\logo_tsg_dev.png" size="17972">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8SO4cI9HPP4mb7qOW+qiLIxkkgAz5iCrItn0Tq/W4qg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MAK RU Kamish.jpg" size="25495">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TU2AKmFLpVzi+4eHurM9gWbNXE5A1FyLZ7b084YgbaQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MAK RU Rastr.jpg" size="37132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Mn9vrLXHoV8DSHwSsyqJYtTyqL56FASX9fbl/Liny2k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MAK RU Surpat.jpg" size="35259">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nwGpusux4tdNf7oovdCZYy6Ukhc+1xEUF267233jKmQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\MAK RU VSR.jpg" size="26337">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wsgznn+7FL6SvgkRq7vhU2qrwYU0dRT5goTgFSqOLZo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\network-error.png" size="3531">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iAMcjAbSZJVud1n466DnOb/ul4MQRmziF8eNKGZ2NSE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\network-transmit-receive.png" size="3527">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8nIHVQCN6Bp1R6GTkXeqbGyf5YcXbLxIOj81TOf2bVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\other_arma3.png" size="152482">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7OJPPL5shrWlbaobNhbamfoanJSpqUkB7Bq7REP69A8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\other_arma3_blue.png" size="155100">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BPMYP5hijM7X1druXn1YXftDQyk2E6cftpWlx/Yi56s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\other_arma3_red.png" size="153532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sfXwX4SILHjJz6ylBj0+WAjcFvgRniyX/hCSSYQfago=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\preferences-applications-screen-unlock.png" size="4949">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>javjBhCfS5wrUG981VOTDVXk0zSaMFF90D7187qVhvc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\preferences-certificates.png" size="17965">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zxNXbTp3nz2XAK0NWQVFKBvD+irSiiux3l3KMyLQZw8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\preferences-desktop-user-password.png" size="3273">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z9EVJU0BfEPB9a6oeG4Taq3A+QLF+3aNlU/6O33KWmE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\rhs_logo_lead.png" size="68935">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RImNMDwsdkC42RmEo1hPse0ZYmhoQei60ooiR3FNAX4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\RHSAFRF.jpg" size="24303">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GVEnYNzu5C5duDF7dfsA4PyO13em4eFq1AhTK3a+46Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\RHSGREF.jpg" size="14214">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cTWKLcoWOpcrY/R9uBv2FOCjSPwTXOcW/1w/sm3Vkuc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\RHSSAF.jpg" size="13441">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>31T/pkN06BvqY8rQBXYTnWCbEbpi6d9XAvAm0qotfN0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\RHSUSAF.jpg" size="22321">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>j16F2hne53P+M6cGdu3OVHjt+G/ltLIqa83HU2cK8tI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\save_icon.png" size="12723">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QxlA33t639NKSHn1PnwwC0ZsO7hphq/qfB9YYzPGvmw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\softether-vpn.png" size="18122">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dNIu/qskliPjpXGzjhdZQzp615zqrTrtJFamQjwucvE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\softether-vpn-logo.jpg" size="47386">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uD+aIEfyqxIk1pwQnggQK5W3gW86plzFIMI3sPeltOs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\stock_bookmark.png" size="1143">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pT5O5xBRECqPTJ5S3dbTpUxwp+keyseUbo1659cwUpA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\thumb_421_250_label_madeingermany_final[269].png" size="6687">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mztyCAuUV2VzHC6cCvwuj57Nu1klJp4XOENn4J8Sh2E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\ts3.jpg" size="6643">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7LybIChCH9WIjBtV6OPcawHY/jl32FoaHHOOa2iZwnU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\ts3client.png" size="53595">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>z5xb+32ATGcG0XHgJa8bmD+W/wet8FIWtR5jBFKJIvw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\unity-tweak-tool.png" size="6060">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mwb7mSzJIrEDbFW8DOmRqR8NXMigW+Rp+pFSVDaTkPE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\valide.png" size="2691">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ayzF9yTRzmf8bbybmQsMrrz4p9uhfNBybgmH3gaJYBk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\view-sort-descending.png" size="2129">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1eDsjZJbxZV/vICCMH914PapQQOsOHg36BuT5HGzzIs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\zeroinstall.png" size="16943">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5siRdmqFtsGdWAe8IIeEb+maiI0nrlPlk91HPvPVGio=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TSGLauncherA3.ico" size="9662">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jQhw5/Otd7nbgGFEpkeGb7CwCUyreW77Ti7U3Q9048g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TSGModLoader.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Список версий Windows, на которых это приложение было протестировано
+           и будет работать. Раскомментируйте соответствующие элементы, чтобы ОС Windows 
+           автоматически выбрала наиболее совместимое окружение. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=VELES\veles" issuerKeyHash="9a99314802da95ff99fd88b9207ba63a64c7ea6d" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>tMIfJvDqJwS4o1bVOWd1VNGBOX7knxnVggDYIOD5DN0=</DigestValue></Reference></SignedInfo><SignatureValue>BTly3cipE2G6RPMfFTeFSRU/XGgzvQ9WNp5JAohL4DdaAmlEKAoUeZoO4ks1MALV4XT6DbnZ4EvSG9C5XKXOD+skiTikh+ehc75OVcLSrpWWD1PSS3AF9OJ1tnqMVLSpbhsd8dt8mzd9EvfIT9+sHtryLSw3V+/x2Y+9WeCWByE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>5Ts65j5X4X5GsS9SPM4zo4jgaC4fZWhaG38jF2/Xh2FmqL0SBJLZhly46M98pTBNxyrt3uUQu+PpkHIA7R43enJdhxD5qpXKxnW8A6vd9LH8wljcJrqlzQxZHb4Uh0X2iJLIu+xfrIHryA636OXAuTUleu6JNfaSHwrvw4+23Wk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="dd0cf9e020d80082d5199fe47e3981d154756739d556a3b80427eaf0261fc2b4" Description="" Url=""><as:assemblyIdentity name="TSGModLoader.exe" version="1.0.0.0" publicKeyToken="8355523babbdb981" language="ru" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=VELES\veles</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Oh1z5M0a1mAVurOuT3J6CzApHqt+QOawTcLkQGZI8X4=</DigestValue></Reference></SignedInfo><SignatureValue>UKa2R/D4WqycmWUusNHmg5MfzXNoE7tbHlA1iuilxgG8sdQhsPQRK0+0ItgEmIrwwUpMxJjWnqERac/fnfQly/iANLYFGpvfxVLeLI+TNh9NYo7eXRANz/Hk4LZTPzk0+kJXAmqU8aP8XurtZ+82bxgJjJJL2KjSQLSPePBf5bI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>5Ts65j5X4X5GsS9SPM4zo4jgaC4fZWhaG38jF2/Xh2FmqL0SBJLZhly46M98pTBNxyrt3uUQu+PpkHIA7R43enJdhxD5qpXKxnW8A6vd9LH8wljcJrqlzQxZHb4Uh0X2iJLIu+xfrIHryA636OXAuTUleu6JNfaSHwrvw4+23Wk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQYc/AjcBwHrBKJMN1S5OVIDANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAVgBFAEwARQBTAFwAdgBlAGwAZQBzMB4XDTIwMDIxNDE1MDU1OVoXDTIxMDIxMzIxMDU1OVowITEfMB0GA1UEAx4WAFYARQBMAEUAUwBcAHYAZQBsAGUAczCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA5Ts65j5X4X5GsS9SPM4zo4jgaC4fZWhaG38jF2/Xh2FmqL0SBJLZhly46M98pTBNxyrt3uUQu+PpkHIA7R43enJdhxD5qpXKxnW8A6vd9LH8wljcJrqlzQxZHb4Uh0X2iJLIu+xfrIHryA636OXAuTUleu6JNfaSHwrvw4+23WkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCPr3kWQWup6Gku3/6YMhF1M4iBo+BJgnpTGlYC1oAZc1gT15RI4/C5g3MJQGtyJ7Cwum+ApQzBMh8bi9AK7rNT29pq59oMFWAhg0VDPqTvgUPW8HNLKi7V7ZHqZlyeSDalyTNcWfPoHAfplYCp8KySPo6NcjsHXx+hjzp1Jt4mpw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

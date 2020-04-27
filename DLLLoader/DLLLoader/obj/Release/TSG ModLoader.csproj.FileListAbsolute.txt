@@ -1,0 +1,36 @@
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\Compressor\lzma.exe
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.config
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\TSGModLoader.pdb
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.dll
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.xml
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csprojAssemblyReference.cache
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\DLLLoader.CoreForm.resources
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\DLLLoader.Properties.Resources.resources
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.GenerateResource.cache
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.CopyComplete
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSGModLoader.pdb
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.manifest
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\bin\Release\TSGModLoader.application
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSGModLoader.TrustInfo.xml
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe.manifest
+D:\A3A-Dev\@DLLLoader\DLLLoader\DLLLoader\obj\Release\TSGModLoader.application
+C:\Mail\DLLLoader\DLLLoader\bin\Release\Compressor\lzma.exe
+C:\Mail\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.config
+C:\Mail\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.manifest
+C:\Mail\DLLLoader\DLLLoader\bin\Release\TSGModLoader.application
+C:\Mail\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe
+C:\Mail\DLLLoader\DLLLoader\bin\Release\TSGModLoader.pdb
+C:\Mail\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.dll
+C:\Mail\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.xml
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csprojAssemblyReference.cache
+C:\Mail\DLLLoader\DLLLoader\obj\Release\DLLLoader.CoreForm.resources
+C:\Mail\DLLLoader\DLLLoader\obj\Release\DLLLoader.Properties.Resources.resources
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.GenerateResource.cache
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.TrustInfo.xml
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe.manifest
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.application
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.CopyComplete
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe
+C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.pdb
