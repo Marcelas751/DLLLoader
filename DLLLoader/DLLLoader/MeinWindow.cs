@@ -81,7 +81,7 @@ namespace DLLLoader
                     processDirectory(directory);
 
                     Directory.Delete(directory, true);
-                    textBox1.AppendText("Deleting: " + directory + Environment.NewLine);
+                    textBox1.AppendText("Очистка выходной директории: " + directory + Environment.NewLine);
                 }
             }
             catch (Exception ex)
@@ -99,7 +99,7 @@ namespace DLLLoader
                 button_changeModDirCompress.Enabled = false;
                 Compress.Enabled = false;
 
-                textBox1.AppendText("START Compressing: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
+                textBox1.AppendText("Сжатие запущено: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
 
                 SetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir", textBox2.Text);
                 SetKeyValue(@"Software\TSG\TSG Launcher A3\", "CompressDir", textBox3.Text);
@@ -121,10 +121,10 @@ namespace DLLLoader
                 }
                 
 
-                textBox1.AppendText("Compressing DONE: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
+                textBox1.AppendText("Сжатие ЗАВЕРШЕНО: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
                 textBox1.AppendText("----------------------------------------------------------" + Environment.NewLine);
-                textBox1.AppendText("Ready To Work!" + Environment.NewLine);
-                MessageBox.Show("Compressing: DONE! \nReady To Work!", "DONE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox1.AppendText("Готов к работе!" + Environment.NewLine);
+                MessageBox.Show("Сжатие и подсчет хэшей завершено. \nГотов к работе!", "Выполнено", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 button_changeModDir.Enabled = true;
                 button_changeModDirCompress.Enabled = true;
                 return;

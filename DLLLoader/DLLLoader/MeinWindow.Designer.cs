@@ -56,14 +56,13 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.25F);
-            this.textBox1.Location = new System.Drawing.Point(37, 530);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(182, 171);
             this.textBox1.MaxLength = 3276700;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(917, 388);
+            this.textBox1.Size = new System.Drawing.Size(776, 116);
             this.textBox1.TabIndex = 38;
             // 
             // textBox2
@@ -71,10 +70,9 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.CausesValidation = false;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.textBox2.Location = new System.Drawing.Point(11, 76);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(7, 51);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(885, 22);
+            this.textBox2.Size = new System.Drawing.Size(590, 15);
             this.textBox2.TabIndex = 40;
             this.textBox2.TabStop = false;
             // 
@@ -83,10 +81,9 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.CausesValidation = false;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.textBox3.Location = new System.Drawing.Point(11, 76);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Location = new System.Drawing.Point(7, 51);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(885, 22);
+            this.textBox3.Size = new System.Drawing.Size(590, 15);
             this.textBox3.TabIndex = 41;
             this.textBox3.TabStop = false;
             // 
@@ -96,22 +93,20 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe Print", 6.25F, System.Drawing.FontStyle.Bold);
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(194, 40);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(110, 26);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(199, 23);
+            this.label15.Size = new System.Drawing.Size(189, 16);
             this.label15.TabIndex = 61;
-            this.label15.Text = "kindly supported by veles_de";
+            this.label15.Text = "kindly supported by veles_de, Marcelas";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(181, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(108, 6);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(223, 38);
+            this.label9.Size = new System.Drawing.Size(151, 25);
             this.label9.TabIndex = 62;
             this.label9.Text = "TSG ModLoader";
             // 
@@ -124,9 +119,10 @@
             this.panel1.Controls.Add(this.button_changeModDir);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(37, 70);
+            this.panel1.Location = new System.Drawing.Point(11, 47);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(917, 176);
+            this.panel1.Size = new System.Drawing.Size(450, 119);
             this.panel1.TabIndex = 63;
             // 
             // pictureBox2
@@ -136,10 +132,9 @@
             this.pictureBox2.Image = global::DLLLoader.Properties.Resources.tap_extract;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 24);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 65;
             this.pictureBox2.TabStop = false;
@@ -148,9 +143,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label4.Location = new System.Drawing.Point(77, 42);
+            this.label4.Location = new System.Drawing.Point(51, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(361, 21);
+            this.label4.Size = new System.Drawing.Size(261, 13);
             this.label4.TabIndex = 46;
             this.label4.Text = "(например : D:\\A3A\\@TSG_MODs\\@SGTu_MODs)";
             // 
@@ -165,10 +161,9 @@
             this.button_changeModDir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_changeModDir.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_changeModDir.ForeColor = System.Drawing.Color.Transparent;
-            this.button_changeModDir.Location = new System.Drawing.Point(11, 106);
-            this.button_changeModDir.Margin = new System.Windows.Forms.Padding(4);
+            this.button_changeModDir.Location = new System.Drawing.Point(7, 71);
             this.button_changeModDir.Name = "button_changeModDir";
-            this.button_changeModDir.Size = new System.Drawing.Size(163, 57);
+            this.button_changeModDir.Size = new System.Drawing.Size(109, 38);
             this.button_changeModDir.TabIndex = 43;
             this.button_changeModDir.Text = "Сменить";
             this.button_changeModDir.UseVisualStyleBackColor = false;
@@ -178,9 +173,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 14);
+            this.label1.Location = new System.Drawing.Point(51, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 28);
+            this.label1.Size = new System.Drawing.Size(280, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Путь к папке, где находятся обновления ::";
             // 
@@ -193,9 +189,10 @@
             this.panel2.Controls.Add(this.button_changeModDirCompress);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(37, 262);
+            this.panel2.Location = new System.Drawing.Point(508, 47);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(917, 176);
+            this.panel2.Size = new System.Drawing.Size(450, 119);
             this.panel2.TabIndex = 64;
             // 
             // pictureBox3
@@ -205,10 +202,9 @@
             this.pictureBox3.Image = global::DLLLoader.Properties.Resources.tap_extract_to;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 22);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(7, 15);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 38);
+            this.pictureBox3.Size = new System.Drawing.Size(32, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 66;
             this.pictureBox3.TabStop = false;
@@ -217,9 +213,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.label3.Location = new System.Drawing.Point(77, 42);
+            this.label3.Location = new System.Drawing.Point(51, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(419, 21);
+            this.label3.Size = new System.Drawing.Size(304, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "(например : D:\\Compressed\\@TSG_MODs\\@SGTu_MODs)";
             // 
@@ -234,10 +231,9 @@
             this.button_changeModDirCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_changeModDirCompress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_changeModDirCompress.ForeColor = System.Drawing.Color.Transparent;
-            this.button_changeModDirCompress.Location = new System.Drawing.Point(11, 106);
-            this.button_changeModDirCompress.Margin = new System.Windows.Forms.Padding(4);
+            this.button_changeModDirCompress.Location = new System.Drawing.Point(7, 71);
             this.button_changeModDirCompress.Name = "button_changeModDirCompress";
-            this.button_changeModDirCompress.Size = new System.Drawing.Size(163, 57);
+            this.button_changeModDirCompress.Size = new System.Drawing.Size(109, 38);
             this.button_changeModDirCompress.TabIndex = 44;
             this.button_changeModDirCompress.Text = "Сменить";
             this.button_changeModDirCompress.UseVisualStyleBackColor = false;
@@ -247,9 +243,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 14);
+            this.label2.Location = new System.Drawing.Point(51, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(575, 28);
+            this.label2.Size = new System.Drawing.Size(387, 19);
             this.label2.TabIndex = 40;
             this.label2.Text = "Путь к папке, куда нужно отправить сжатые обновления ::";
             // 
@@ -264,12 +261,12 @@
             this.Compress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Compress.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Compress.ForeColor = System.Drawing.Color.Transparent;
-            this.Compress.Location = new System.Drawing.Point(37, 444);
+            this.Compress.Location = new System.Drawing.Point(11, 170);
+            this.Compress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Compress.Name = "Compress";
-            this.Compress.Size = new System.Drawing.Size(917, 79);
+            this.Compress.Size = new System.Drawing.Size(166, 39);
             this.Compress.TabIndex = 39;
-            this.Compress.Text = "Create the JSON file (md5.json) and\r\ncompress from \"Mods Dir\" path to \"Compress D" +
-    "ir\".\r\n";
+            this.Compress.Text = "Сжать и посчитать хеш";
             this.Compress.UseVisualStyleBackColor = false;
             this.Compress.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -280,10 +277,9 @@
             this.pictureBox1.Image = global::DLLLoader.Properties.Resources.logo_tsg_dev;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(91, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
@@ -291,11 +287,11 @@
             // CoreForm
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(989, 931);
+            this.ClientSize = new System.Drawing.Size(969, 297);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.Compress);
             this.Controls.Add(this.label9);
@@ -306,6 +302,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "CoreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

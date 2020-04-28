@@ -93,7 +93,7 @@ namespace DLLLoader
         /// Create Recursive file hashes of a directory and save them into a json file or a local variable
         /// </summary>
       
-        public string CreateHashes() // чанк и деление на количество ядер + одинаковые хеши
+        public string CreateHashes() // чанк и деление на количество ядер
         {
             if (Config.Path.ToString() != string.Empty)
             {    
@@ -119,7 +119,6 @@ namespace DLLLoader
                         {
                             thread.Join();
                         }
-                        
                     }
                     else
                     {
@@ -140,11 +139,26 @@ namespace DLLLoader
                         }
                     }
                     
-                    if (Hashes.Count < files.Length) //если что-то осталось неподсчитанным => в основной поток после выполнения параллельных
+                    if (Hashes.Count < files.Length) //если что-то осталось неподсчитанным 
 
                     {
                         LastFileComputed = Hashes.Count;
-                        ComputeHashes(files, Hashes.Count, files.Length);
+                        int filesarraychunk = 1;
+                        int chunkEnd = LastFileComputed;
+                        Thread[] threads = new Thread[files.Length-Hashes.Count];
+                        for (int i = 0; i < files.Length - Hashes.Count; ++i)
+                        {
+                            int chunkStart = chunkEnd;
+                            chunkEnd = chunkStart + filesarraychunk;
+                            int chunkEnd1 = chunkEnd;
+                            threads[i] = new Thread(() => ComputeHashes(files, chunkStart, chunkEnd1));
+                            threads[i].Start();
+                        }
+                        foreach (var thread in threads)
+                        {
+                            thread.Join();
+                        }
+                        //   ComputeHashes(files, Hashes.Count, files.Length); //для последовательного пересчета
                     }
                     var json = JsonConvert.SerializeObject(Hashes);
                     if (Config.CreateMd5File == true)
@@ -159,7 +173,9 @@ namespace DLLLoader
                            if (Config.Compress != true) return json;
                            if (!Directory.Exists(Config.CompressedDir)) return json;
                            if (!File.Exists(Config.LzmaCompressor)) return json;
-                        //сжатие          
+                        //---------------------------------------------------------------------------
+                        //сжатие      
+                        //---------------------------------------------------------------------------
                         if (files.Length < numThreads)  
                         {
                             int filesarraychunk = 1;
@@ -198,7 +214,21 @@ namespace DLLLoader
                         }
                         if (LastFileComputed != files.Length)
                         {
-                            CompressFile(files, LastFileComputed, files.Length);
+                            int filesarraychunk = 1;
+                            int chunkEnd = LastFileComputed;
+                            Thread[] threads = new Thread[files.Length - LastFileComputed];
+                            for (int i = 0; i < files.Length - LastFileComputed; ++i)
+                            {
+                                int chunkStart = chunkEnd;
+                                chunkEnd = chunkStart + filesarraychunk;
+                                int chunkEnd1 = chunkEnd;
+                                threads[i] = new Thread(() => CompressFile(files, chunkStart, chunkEnd1));
+                                threads[i].Start();
+                            }
+                            foreach (var thread in threads)
+                            {
+                                thread.Join();
+                            }
                         }
                         CoreForm.textBox1.AppendText("---------------------------------------------------------------" + Environment.NewLine);
                         return json;
@@ -223,15 +253,14 @@ namespace DLLLoader
         /// Compress Files Async
         /// </summary>
 
-        protected void CompressFile(string[] files, int chunkStart, int chunkEnd)   //смена на массив с добавлением внутрь цикла
+        protected void CompressFile(string[] files, int chunkStart, int chunkEnd)   
         {
             for (int j = chunkStart; j < chunkEnd; j++)
             {
                 if (files[j].Contains(".lzma")) return;
                 if (!(files[j].Contains("md5.json"))) // EXCLUDE !!!!!
                 {
-                    CoreForm.textBox1.AppendText("Compressing: " + files[j].Replace(Config.Path, "") + Environment.NewLine); // Short Path
-                                                                                                                         //CoreForm.textBox1.AppendText("Compressing: " + file + Environment.NewLine); // Long Path
+                    CoreForm.textBox1.AppendText("Сжатие файла: " + files[j].Replace(Config.Path, "") + Environment.NewLine); // Short Path                                                                                                   
                     var path = Config.CompressedDir + "\\" + files[j].Replace(Config.Path, "");
                     var dir = path;
                     var index = dir.LastIndexOf("\\", StringComparison.Ordinal);
