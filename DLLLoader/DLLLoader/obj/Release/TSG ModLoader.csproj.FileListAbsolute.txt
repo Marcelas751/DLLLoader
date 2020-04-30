@@ -34,3 +34,22 @@ C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.application
 C:\Mail\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.CopyComplete
 C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe
 C:\Mail\DLLLoader\DLLLoader\obj\Release\TSGModLoader.pdb
+D:\DLLLoader\DLLLoader\bin\Release\Compressor\lzma.exe
+D:\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.config
+D:\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe.manifest
+D:\DLLLoader\DLLLoader\bin\Release\TSGModLoader.application
+D:\DLLLoader\DLLLoader\bin\Release\TSGModLoader.exe
+D:\DLLLoader\DLLLoader\bin\Release\TSGModLoader.pdb
+D:\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.dll
+D:\DLLLoader\DLLLoader\bin\Release\Newtonsoft.Json.xml
+D:\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csprojAssemblyReference.cache
+D:\DLLLoader\DLLLoader\obj\Release\DLLLoader.CoreForm.resources
+D:\DLLLoader\DLLLoader\obj\Release\DLLLoader.Properties.Resources.resources
+D:\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.GenerateResource.cache
+D:\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.CoreCompileInputs.cache
+D:\DLLLoader\DLLLoader\obj\Release\TSGModLoader.TrustInfo.xml
+D:\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe.manifest
+D:\DLLLoader\DLLLoader\obj\Release\TSGModLoader.application
+D:\DLLLoader\DLLLoader\obj\Release\TSG ModLoader.csproj.CopyComplete
+D:\DLLLoader\DLLLoader\obj\Release\TSGModLoader.exe
+D:\DLLLoader\DLLLoader\obj\Release\TSGModLoader.pdb
