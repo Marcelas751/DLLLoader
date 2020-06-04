@@ -1,15 +1,37 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using System.IO;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 
 namespace DLLLoader
 {
+
     public partial class CoreForm : Form
     {
+        #region Библиотеки
+        [DllImport("user32.dll")]
+        static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc callback, IntPtr hInstance, uint threadId);
+
+        [DllImport("user32.dll")]
+        static extern bool UnhookWindowsHookEx(IntPtr hInstance);
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr LoadLibrary(string lpFileName);
+
+        private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+
+        const int WH_KEYBOARD_LL = 13; // Номер глобального LowLevel-хука на клавиатуру(int 13 вспомним....)
+        const int
+            WM_KEYDOWN = 0x100,       //Key down
+            WM_KEYUP = 0x101;         //Key up
+
+        private LowLevelKeyboardProc _proc = hookProc;
+
+        private static IntPtr hhook = IntPtr.Zero;
+        #endregion
         string[] argumentDLLLoader;
         private readonly SynchronizationContext synchronizationContext;
         //private DateTime previousTime = DateTime.Now;
@@ -19,12 +41,39 @@ namespace DLLLoader
             Size = Screen.PrimaryScreen.WorkingArea.Size;
             argumentDLLLoader = args;
             InitializeComponent();
+            //Запуск хука
+            IntPtr hInstance = LoadLibrary("User32");
+            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, _proc, hInstance, 0);
             synchronizationContext = SynchronizationContext.Current; //context from UI thread 
             DisplayU();
             Updater.CoreForm = this;
             CheckForIllegalCrossThreadCalls = false;
+            
         }
-
+        private void CoreForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UnhookWindowsHookEx(hhook); //Остановить хук
+        }
+        #region Функция хука
+        public static IntPtr hookProc(int code, IntPtr wParam, IntPtr lParam)
+        {
+            if (code >= 0 && wParam == (IntPtr)WM_KEYDOWN || code >= 0 && wParam == (IntPtr)260)
+            {
+                int vkCode = Marshal.ReadInt32(lParam); //Получить код клавиши
+                if (vkCode == 19) //Нажатие Pause
+                {
+                    Updater.Config.Freeze = !(Updater.Config.Freeze);
+                    if (Updater.Config.Freeze == true)
+                    {
+                        MessageBox.Show("Завершение работы над текущими файлами и остановка. \nНажмите ОК чтобы продолжить.");
+                        Updater.Config.Freeze = !(Updater.Config.Freeze);
+                        
+                    }
+                }
+            }
+            return IntPtr.Zero;
+        }
+        #endregion
         // записывает ключ в реестр
         static public void SetKeyValue(string DirName, string name, string value)
         {
@@ -48,8 +97,8 @@ namespace DLLLoader
         private void DisplayU()
         {
             // Set UploadDir
-            if (GetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir") != "00") 
-            { 
+            if (GetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir") != "00")
+            {
                 string uploadPath = GetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir");
                 textBox2.Text = uploadPath;
             }
@@ -89,6 +138,7 @@ namespace DLLLoader
                 MessageBox.Show(ex.Message);
             }
         }
+
         // Start Compress
         private void Button2_Click(object sender, EventArgs e) // Compress
         {
@@ -98,7 +148,7 @@ namespace DLLLoader
                 button_changeModDir.Enabled = false;
                 button_changeModDirCompress.Enabled = false;
                 Compress.Enabled = false;
-
+                MessageBox.Show("Для приостановки процесса нажмите Pause на клавиатуре.");
                 textBox1.AppendText("Сжатие запущено: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
 
                 SetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir", textBox2.Text);
@@ -108,7 +158,7 @@ namespace DLLLoader
                 textBox1.AppendText("----------------------------------------------------------" + Environment.NewLine);
                 Thread.Sleep(300);
 
-               
+
                 {
                     var up = new Updater();
                     Updater.Config.Path = textBox2.Text;  // Upload Dir
@@ -119,7 +169,7 @@ namespace DLLLoader
                     Updater.Config.Compress = true;
                     up.CreateHashes(); // Make local files checksum
                 }
-                
+
 
                 textBox1.AppendText("Сжатие ЗАВЕРШЕНО: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
                 textBox1.AppendText("----------------------------------------------------------" + Environment.NewLine);
@@ -166,5 +216,6 @@ namespace DLLLoader
                 //Application.Restart();
             }
         }
+   
     }
 }

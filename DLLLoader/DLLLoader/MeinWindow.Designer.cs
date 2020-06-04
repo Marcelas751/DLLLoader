@@ -120,7 +120,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Location = new System.Drawing.Point(11, 47);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 119);
             this.panel1.TabIndex = 63;
@@ -190,7 +190,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Location = new System.Drawing.Point(508, 47);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 119);
             this.panel2.TabIndex = 64;
@@ -262,7 +262,7 @@
             this.Compress.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Compress.ForeColor = System.Drawing.Color.Transparent;
             this.Compress.Location = new System.Drawing.Point(11, 170);
-            this.Compress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Compress.Margin = new System.Windows.Forms.Padding(2);
             this.Compress.Name = "Compress";
             this.Compress.Size = new System.Drawing.Size(166, 39);
             this.Compress.TabIndex = 39;
@@ -302,7 +302,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "CoreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

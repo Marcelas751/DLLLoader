@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO;
@@ -20,6 +19,7 @@ namespace DLLLoader
         /// 
         public class Config
         {
+            public static bool Freeze = false;
             /// <summary>
             /// Path Directory
             /// </summary>
@@ -46,7 +46,7 @@ namespace DLLLoader
             public static bool Compress { get; set; }
         }
 
-         protected string GetMd5HashFromFile(string fileName)
+        protected string GetMd5HashFromFile(string fileName)
         {
             try
             {
@@ -78,8 +78,13 @@ namespace DLLLoader
         }
 
         public ConcurrentDictionary<string, string> Hashes = new ConcurrentDictionary<string, string>();
-        public ConcurrentDictionary<string, string> ComputeHashes(string[] files,int chunkStart,int chunkEnd)
+
+        public ConcurrentDictionary<string, string> ComputeHashes(string[] files, int chunkStart, int chunkEnd)
         {
+            while (Updater.Config.Freeze == true) 
+            {
+                Thread.Sleep(1); //Pause
+            } 
             for (int j = chunkStart; j < chunkEnd; j++) //строго меньше chunkEnd
             {
                 var hash = GetMd5HashFromFile(files[j]);
@@ -96,7 +101,7 @@ namespace DLLLoader
         public string CreateHashes() // чанк и деление на количество ядер
         {
             if (Config.Path.ToString() != string.Empty)
-            {    
+            {
                 try
                 {
                     var files = FilesPath(Config.Path.ToString());
@@ -189,7 +194,7 @@ namespace DLLLoader
                                 threads[i] = new Thread(() => CompressFile(files, chunkStart, chunkEnd1));
                                 threads[i].Start();
                             }
-                            foreach (var thread in threads)
+                        foreach (var thread in threads)
                             {
                                 thread.Join();
                             }
@@ -207,7 +212,7 @@ namespace DLLLoader
                                 threads[i] = new Thread(() => CompressFile(files, chunkStart, chunkEnd1));
                                 threads[i].Start();
                             }
-                            foreach (var thread in threads)
+                          foreach (var thread in threads)
                             {
                                 thread.Join();
                             }
@@ -225,7 +230,7 @@ namespace DLLLoader
                                 threads[i] = new Thread(() => CompressFile(files, chunkStart, chunkEnd1));
                                 threads[i].Start();
                             }
-                            foreach (var thread in threads)
+                           foreach (var thread in threads)
                             {
                                 thread.Join();
                             }
@@ -253,7 +258,7 @@ namespace DLLLoader
         /// Compress Files Async
         /// </summary>
 
-        protected void CompressFile(string[] files, int chunkStart, int chunkEnd)   
+        protected void CompressFile(string[] files, int chunkStart, int chunkEnd)
         {
             for (int j = chunkStart; j < chunkEnd; j++)
             {
@@ -275,13 +280,17 @@ namespace DLLLoader
             }
         }
 
-        #pragma warning disable CS1998
+#pragma warning disable CS1998
         /// <summary>               
         /// Compression Framework                
         /// </summary>
 
-        protected void Compression(string file) 
+        protected void Compression(string file)
         {
+            while (Updater.Config.Freeze == true)
+            {
+                Thread.Sleep(1);//Pause
+            }
             using (Process process = Process.Start(new ProcessStartInfo()
             {
                 FileName = Config.LzmaCompressor,
