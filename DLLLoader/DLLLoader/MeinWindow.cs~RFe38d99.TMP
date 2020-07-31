@@ -146,7 +146,6 @@ namespace DLLLoader
             try
             {
                 textBox1.Clear();
-                listViewFiles.Items.Clear();
                 button_changeModDir.Enabled = false;
                 button_changeModDirCompress.Enabled = false;
                 Compress.Enabled = false;
@@ -171,6 +170,8 @@ namespace DLLLoader
                     Updater.Config.Compress = true;
                     up.CreateHashes(); // Make local files checksum
                 }
+
+
                 textBox1.AppendText("Сжатие ЗАВЕРШЕНО: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
                 textBox1.AppendText("----------------------------------------------------------" + Environment.NewLine);
                 textBox1.AppendText("Готов к работе!" + Environment.NewLine);

@@ -46,6 +46,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Compress = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listViewFiles = new System.Windows.Forms.ListView();
+            this.FileNameMD5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OldMD5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CurrentMD5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ChangedTrigger = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,7 +67,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(776, 116);
+            this.textBox1.Size = new System.Drawing.Size(776, 73);
             this.textBox1.TabIndex = 38;
             // 
             // textBox2
@@ -146,7 +151,7 @@
             this.label4.Location = new System.Drawing.Point(51, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(261, 13);
+            this.label4.Size = new System.Drawing.Size(263, 13);
             this.label4.TabIndex = 46;
             this.label4.Text = "(например : D:\\A3A\\@TSG_MODs\\@SGTu_MODs)";
             // 
@@ -216,7 +221,7 @@
             this.label3.Location = new System.Drawing.Point(51, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 13);
+            this.label3.Size = new System.Drawing.Size(306, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "(например : D:\\Compressed\\@TSG_MODs\\@SGTu_MODs)";
             // 
@@ -284,6 +289,47 @@
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
+            // listViewFiles
+            // 
+            this.listViewFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FileNameMD5,
+            this.OldMD5,
+            this.CurrentMD5,
+            this.ChangedTrigger});
+            this.listViewFiles.FullRowSelect = true;
+            this.listViewFiles.GridLines = true;
+            this.listViewFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewFiles.HideSelection = false;
+            this.listViewFiles.Location = new System.Drawing.Point(11, 293);
+            this.listViewFiles.Name = "listViewFiles";
+            this.listViewFiles.Size = new System.Drawing.Size(947, 193);
+            this.listViewFiles.TabIndex = 65;
+            this.listViewFiles.UseCompatibleStateImageBehavior = false;
+            this.listViewFiles.View = System.Windows.Forms.View.Details;
+            // 
+            // FileNameMD5
+            // 
+            this.FileNameMD5.Text = "Имя файла";
+            this.FileNameMD5.Width = 269;
+            // 
+            // OldMD5
+            // 
+            this.OldMD5.Text = "Исходный";
+            this.OldMD5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OldMD5.Width = 278;
+            // 
+            // CurrentMD5
+            // 
+            this.CurrentMD5.Text = "Текущий";
+            this.CurrentMD5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CurrentMD5.Width = 279;
+            // 
+            // ChangedTrigger
+            // 
+            this.ChangedTrigger.Text = "Изменён?";
+            this.ChangedTrigger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ChangedTrigger.Width = 115;
+            // 
             // CoreForm
             // 
             this.AccessibleName = "";
@@ -291,7 +337,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(969, 297);
+            this.ClientSize = new System.Drawing.Size(969, 498);
+            this.Controls.Add(this.listViewFiles);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.Compress);
             this.Controls.Add(this.label9);
@@ -337,6 +384,11 @@
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.PictureBox pictureBox2;
         internal System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ColumnHeader FileNameMD5;
+        private System.Windows.Forms.ColumnHeader OldMD5;
+        private System.Windows.Forms.ColumnHeader CurrentMD5;
+        private System.Windows.Forms.ColumnHeader ChangedTrigger;
+        public System.Windows.Forms.ListView listViewFiles;
     }
 }
 

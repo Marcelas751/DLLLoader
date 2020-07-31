@@ -183,7 +183,7 @@ namespace DLLLoader
                         //---------------------------------------------------------------------------
                         //вывод списка hash      
                         //---------------------------------------------------------------------------
-                        var OldMD5List = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Updater.Config.Path + "\\md5.json"));
+                            var OldMD5List = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Updater.Config.Path + "\\md5.json"));
                         foreach (KeyValuePair <string, string> kvp in Hashes)
                            {
                             if (kvp.Key != "md5.json")
@@ -207,22 +207,18 @@ namespace DLLLoader
                                 CoreForm.listViewFiles.Items.Add(hasheslist);
                             }
                            }
-
-                        string[] modifiedFiles = new string[CoreForm.listViewFiles.Items.Count];
-                        int j = 0;
-
+                        string[] modifiedFiles = null;int j = -1;
                         //Сравнение старой и подсчитанной суммы
                         for (int i = 0; i < CoreForm.listViewFiles.Items.Count; i++)
                         {
                             if (CoreForm.listViewFiles.Items[i].SubItems[1].Text != CoreForm.listViewFiles.Items[i].SubItems[2].Text)
                             {
                                 CoreForm.listViewFiles.Items[i].SubItems[3].Text = "+";
-                                modifiedFiles[j++] = Updater.Config.Path + "\\"+ CoreForm.listViewFiles.Items[i].Text; //сформируй список "плюсиков"
+                              //  modifiedFiles[0] = CoreForm.listViewFiles.Items[i].Text;
                             }
                         }
-                        Array.Resize(ref modifiedFiles,j); // срезать массив под количесво модифицированных файлов
-                        files = modifiedFiles; //потому что files исп. как источник данных для методов сжатия
-                        LastFileComputed = files.Length; //фикс от переполнения в блоке if (LastFileComputed != files.Length)                                                                                                               
+                        MessageBox.Show(modifiedFiles[0], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //сформируй список плюсиков
                         //---------------------------------------------------------------------------
                         //сжатие      
                         //---------------------------------------------------------------------------

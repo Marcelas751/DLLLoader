@@ -48,3 +48,22 @@ D:\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csproj.CopyComplete
 D:\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.exe
 D:\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.pdb
 D:\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csproj.CoreCompileInputs.cache
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\Compressor\lzma.exe
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\TSGModLoader.exe.config
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\TSGModLoader.exe.manifest
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\TSGModLoader.application
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\TSGModLoader.exe
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\TSGModLoader.pdb
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csprojAssemblyReference.cache
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\DLLLoader.CoreForm.resources
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\DLLLoader.Properties.Resources.resources
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csproj.GenerateResource.cache
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csproj.CoreCompileInputs.cache
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.TrustInfo.xml
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.exe.manifest
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.application
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSG ModLoader.csproj.CopyComplete
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.exe
+C:\Users\VMScherbakov\Documents\DLLLoader\DLLLoader\obj\Debug\TSGModLoader.pdb

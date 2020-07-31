@@ -183,7 +183,7 @@ namespace DLLLoader
                         //---------------------------------------------------------------------------
                         //вывод списка hash      
                         //---------------------------------------------------------------------------
-                        var OldMD5List = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Updater.Config.Path + "\\md5.json"));
+                            var OldMD5List = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Updater.Config.Path + "\\md5.json"));
                         foreach (KeyValuePair <string, string> kvp in Hashes)
                            {
                             if (kvp.Key != "md5.json")
@@ -220,9 +220,8 @@ namespace DLLLoader
                                 modifiedFiles[j++] = Updater.Config.Path + "\\"+ CoreForm.listViewFiles.Items[i].Text; //сформируй список "плюсиков"
                             }
                         }
-                        Array.Resize(ref modifiedFiles,j); // срезать массив под количесво модифицированных файлов
-                        files = modifiedFiles; //потому что files исп. как источник данных для методов сжатия
-                        LastFileComputed = files.Length; //фикс от переполнения в блоке if (LastFileComputed != files.Length)                                                                                                               
+                        Array.Resize(ref modifiedFiles,j);
+                        files = modifiedFiles;
                         //---------------------------------------------------------------------------
                         //сжатие      
                         //---------------------------------------------------------------------------
