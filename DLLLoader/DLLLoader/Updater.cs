@@ -89,9 +89,12 @@ namespace DLLLoader
             
             for (int j = chunkStart; j < chunkEnd; j++) //строго меньше chunkEnd
             {
-                var hash = GetMd5HashFromFile(files[j]);
-                Hashes.TryAdd(files[j].Replace(Config.Path + "\\", ""), hash);
-                CoreForm.textBox1.AppendText("Создание хэшей: " + files[j].Replace(Config.Path, "") + Environment.NewLine);
+                if (!(files[j].Contains("md5.json")))
+                {
+                    var hash = GetMd5HashFromFile(files[j]);
+                    Hashes.TryAdd(files[j].Replace(Config.Path + "\\", ""), hash);
+                    CoreForm.textBox1.AppendText("Создание хэшей: " + files[j].Replace(Config.Path, "") + Environment.NewLine);
+                }
             }
           return Hashes;
         }
