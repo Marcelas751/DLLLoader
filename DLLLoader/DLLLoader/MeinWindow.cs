@@ -98,9 +98,9 @@ namespace DLLLoader
         private void DisplayU()
         {
             // Set UploadDir
-            if (GetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir") != "00")
+            if (GetKeyValue(@"Software\TSG\TSG MOD Loader\", "UploadDir") != "00")
             {
-                string uploadPath = GetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir");
+                string uploadPath = GetKeyValue(@"Software\TSG\TSG MOD Loader\", "UploadDir");
                 textBox2.Text = uploadPath;
             }
             else
@@ -109,9 +109,9 @@ namespace DLLLoader
                 textBox1.AppendText("Error Set Upload Dir!" + Environment.NewLine);
             }
             // Set Compressed Dir
-            if (GetKeyValue(@"Software\TSG\TSG Launcher A3\", "CompressDir") != "00")
+            if (GetKeyValue(@"Software\TSG\TSG MOD Loader\", "CompressDir") != "00")
             {
-                string compressPath = GetKeyValue(@"Software\TSG\TSG Launcher A3\", "CompressDir");
+                string compressPath = GetKeyValue(@"Software\TSG\TSG MOD Loader\", "CompressDir");
                 textBox3.Text = compressPath;
             }
             else
@@ -153,8 +153,8 @@ namespace DLLLoader
                 MessageBox.Show("Для приостановки процесса нажмите Pause на клавиатуре.");
                 textBox1.AppendText("Сжатие запущено: " + "[" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "]" + Environment.NewLine);
 
-                SetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir", textBox2.Text);
-                SetKeyValue(@"Software\TSG\TSG Launcher A3\", "CompressDir", textBox3.Text);
+                SetKeyValue(@"Software\TSG\TSG MOD Loader\", "UploadDir", textBox2.Text);
+                SetKeyValue(@"Software\TSG\TSG MOD Loader\", "CompressDir", textBox3.Text);
 
                 processDirectory(textBox3.Text);
                 textBox1.AppendText("----------------------------------------------------------" + Environment.NewLine);
@@ -196,7 +196,7 @@ namespace DLLLoader
                 string sSelectedPath = fbd.SelectedPath;
                 textBox2.Text = fbd.SelectedPath;
 
-                SetKeyValue(@"Software\TSG\TSG Launcher A3\", "UploadDir", sSelectedPath);
+                SetKeyValue(@"Software\TSG\TSG MOD Loader\", "UploadDir", sSelectedPath);
                 //Application.Restart();
             }
         }
@@ -212,7 +212,7 @@ namespace DLLLoader
                 string sSelectedPath = fbd.SelectedPath;
                 textBox3.Text = fbd.SelectedPath;
 
-                SetKeyValue(@"Software\TSG\TSG Launcher A3\", "CompressDir", sSelectedPath);
+                SetKeyValue(@"Software\TSG\TSG MOD Loader\", "CompressDir", sSelectedPath);
                 //Application.Restart();
             }
         }
